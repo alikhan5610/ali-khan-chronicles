@@ -46,9 +46,55 @@ function Index() {
       <SiteNav />
       <HeroShowcase />
 
+      {/* ABOUT */}
+      <section id="about" className="relative scroll-mt-24 overflow-hidden py-32">
+        <div className="pointer-events-none absolute left-1/2 top-1/3 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-violet-glow/15 blur-[150px] drift-slow" />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <SectionLabel n="01">About</SectionLabel>
+          <div className="grid gap-14 md:grid-cols-[1fr_1.1fr] md:items-center">
+            <Reveal className="grid grid-cols-5 gap-4">
+              <figure className="col-span-3 overflow-hidden rounded-sm border border-border">
+                <img
+                  src={outdoor.url}
+                  alt="Ali Khan outdoors"
+                  loading="lazy"
+                  className="h-full w-full object-cover cine-grade"
+                />
+              </figure>
+              <figure className="col-span-2 self-end overflow-hidden rounded-sm border border-border">
+                <img
+                  src={portrait.url}
+                  alt="Portrait of Ali Khan"
+                  loading="lazy"
+                  className="h-full w-full object-cover cine-grade"
+                />
+              </figure>
+            </Reveal>
+
+            <Reveal delay={120}>
+              <h2 className="text-4xl font-800 leading-[1.05] md:text-5xl">Ali Khan</h2>
+              <p className="mt-3 text-sm uppercase tracking-[0.25em] text-crimson">
+                Software Engineering · 4th Semester · COMSATS University
+              </p>
+              <p className="mt-7 max-w-lg leading-relaxed text-muted-foreground">
+                I build the layer most people never see — engines, algorithms, ledgers, the quiet
+                machinery underneath the screen. C++, Java and Python are where I think; data
+                structures and graph theory are how I reason.
+              </p>
+              <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
+                Before COMSATS I studied at Forman Christian College University in Lahore. Alongside
+                the coursework, I follow foundation models closely — Claude, ChatGPT and Gemini —
+                because the way software gets written is being rewritten in real time, and I intend
+                to be fluent in both halves of it.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* WORK */}
       <section id="work" className="relative mx-auto max-w-6xl scroll-mt-24 px-6 py-32">
-        <SectionLabel n="01">Selected Work</SectionLabel>
+        <SectionLabel n="02">Selected Work</SectionLabel>
         <h2 className="max-w-2xl text-4xl font-800 leading-[1.05] md:text-6xl">
           Systems built from
           <span className="text-crimson"> first principles</span>.
@@ -97,51 +143,6 @@ function Index() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="relative scroll-mt-24 overflow-hidden py-32">
-        <div className="pointer-events-none absolute left-1/2 top-1/3 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-violet-glow/15 blur-[150px] drift-slow" />
-        <div className="relative mx-auto max-w-6xl px-6">
-          <SectionLabel n="02">About</SectionLabel>
-          <div className="grid gap-14 md:grid-cols-[1fr_1.1fr] md:items-center">
-            <Reveal className="grid grid-cols-5 gap-4">
-              <figure className="col-span-3 overflow-hidden rounded-sm border border-border">
-                <img
-                  src={outdoor.url}
-                  alt="Ali Khan outdoors"
-                  loading="lazy"
-                  className="h-full w-full object-cover cine-grade"
-                />
-              </figure>
-              <figure className="col-span-2 self-end overflow-hidden rounded-sm border border-border">
-                <img
-                  src={portrait.url}
-                  alt="Portrait of Ali Khan"
-                  loading="lazy"
-                  className="h-full w-full object-cover cine-grade"
-                />
-              </figure>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <h2 className="text-4xl font-800 leading-[1.05] md:text-5xl">Ali Khan</h2>
-              <p className="mt-3 text-sm uppercase tracking-[0.25em] text-crimson">
-                Software Engineering · 4th Semester · COMSATS University
-              </p>
-              <p className="mt-7 max-w-lg leading-relaxed text-muted-foreground">
-                I build the layer most people never see — engines, algorithms, ledgers, the quiet
-                machinery underneath the screen. C++, Java and Python are where I think; data
-                structures and graph theory are how I reason.
-              </p>
-              <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
-                Before COMSATS I studied at Forman Christian College University in Lahore. Alongside
-                the coursework, I follow foundation models closely — Claude, ChatGPT and Gemini —
-                because the way software gets written is being rewritten in real time, and I intend
-                to be fluent in both halves of it.
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       {/* CRAFT */}
       <section id="craft" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-32">
