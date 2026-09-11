@@ -39,14 +39,14 @@ export function SiteNav() {
         scrolled ? "border-b border-border bg-background/80 backdrop-blur-xl" : ""
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6 md:py-5">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-display text-lg font-800 italic tracking-tight text-foreground"
+          className="shrink-0 font-display text-lg font-800 italic tracking-tight text-foreground"
         >
           ali<span className="text-crimson">.</span>
         </button>
-        <div className="flex items-center gap-5 md:gap-8">
+        <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:gap-8">
           {sections.map((s) => (
             <button
               key={s.id}
