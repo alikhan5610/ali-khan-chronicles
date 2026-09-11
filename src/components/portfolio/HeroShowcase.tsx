@@ -17,7 +17,7 @@ export function HeroShowcase() {
     };
   }, [active]);
 
-  const current = projects[active];
+  const current = projects[active]!;
 
   return (
     <section
