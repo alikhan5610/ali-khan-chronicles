@@ -236,15 +236,15 @@ function Index() {
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer"
-                  className="group flex items-center justify-between gap-4 py-6 transition-colors hover:bg-card/40"
+                  className="group flex flex-col gap-2 py-5 transition-colors hover:bg-card/40 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-6"
                 >
-                  <span className="flex items-center gap-4">
-                    <Icon className="h-4 w-4 text-crimson" />
-                    <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                  <span className="flex items-center gap-3 sm:gap-4">
+                    <Icon className="h-4 w-4 shrink-0 text-crimson" />
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:text-xs">
                       {label}
                     </span>
                   </span>
-                  <span className="flex items-center gap-3 text-sm transition-transform duration-500 group-hover:-translate-x-1 md:text-lg">
+                  <span className="flex min-w-0 items-center gap-3 break-all text-xs transition-transform duration-500 group-hover:-translate-x-1 sm:text-sm md:text-lg">
                     {value}
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:text-crimson" />
                   </span>
