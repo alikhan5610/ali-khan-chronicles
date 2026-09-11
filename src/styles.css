@@ -150,3 +150,62 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: oklch(0.13 0.004 300);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 3px 3px;
+  }
+}
+
+@utility cine-grade {
+  filter: contrast(1.15) saturate(0.72) brightness(0.78);
+}
+
+@utility glow-crimson {
+  box-shadow: 0 0 80px -20px var(--crimson);
+}
+
+@utility text-ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px oklch(1 0 0 / 12%);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility reveal {
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); opacity: 0.5; }
+  50% { transform: translate3d(3%, -4%, 0) scale(1.12); opacity: 0.85; }
+}
+
+@utility drift-slow {
+  animation: drift 16s ease-in-out infinite;
+}
