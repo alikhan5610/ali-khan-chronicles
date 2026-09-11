@@ -47,9 +47,9 @@ function Index() {
       <HeroShowcase />
 
       {/* ABOUT */}
-      <section id="about" className="relative scroll-mt-24 overflow-hidden py-32">
+      <section id="about" className="relative scroll-mt-24 overflow-hidden py-20 md:py-32">
         <div className="pointer-events-none absolute left-1/2 top-1/3 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-violet-glow/15 blur-[150px] drift-slow" />
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="relative mx-auto max-w-6xl px-5 md:px-6">
           <SectionLabel n="01">About</SectionLabel>
           <div className="grid gap-14 md:grid-cols-[1fr_1.1fr] md:items-center">
             <Reveal className="grid grid-cols-5 gap-4">
@@ -93,9 +93,9 @@ function Index() {
       </section>
 
       {/* WORK */}
-      <section id="work" className="relative mx-auto max-w-6xl scroll-mt-24 px-6 py-32">
+      <section id="work" className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-20 md:px-6 md:py-32">
         <SectionLabel n="02">Selected Work</SectionLabel>
-        <h2 className="max-w-2xl text-4xl font-800 leading-[1.05] md:text-6xl">
+        <h2 className="max-w-2xl text-3xl font-800 leading-[1.05] sm:text-4xl md:text-6xl">
           Systems built from
           <span className="text-crimson"> first principles</span>.
         </h2>
@@ -145,7 +145,7 @@ function Index() {
 
 
       {/* CRAFT */}
-      <section id="craft" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-32">
+      <section id="craft" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 md:px-6 md:py-32">
         <SectionLabel n="03">Craft</SectionLabel>
         <div className="grid gap-6 md:grid-cols-3">
           {skills.map((g, i) => (
@@ -170,9 +170,9 @@ function Index() {
       </section>
 
       {/* JOURNEY */}
-      <section id="journey" className="relative scroll-mt-24 overflow-hidden py-32">
+      <section id="journey" className="relative scroll-mt-24 overflow-hidden py-20 md:py-32">
         <div className="pointer-events-none absolute -right-40 top-1/4 h-[30rem] w-[30rem] rounded-full bg-ember/10 blur-[150px] drift-slow" />
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="relative mx-auto max-w-6xl px-5 md:px-6">
           <SectionLabel n="04">Journey</SectionLabel>
           <div className="relative mt-16 border-l border-border pl-8 md:pl-14">
             {milestones.map((m, i) => (
@@ -195,15 +195,15 @@ function Index() {
       {/* CONTACT */}
       <footer
         id="contact"
-        className="relative scroll-mt-24 overflow-hidden border-t border-border py-32"
+        className="relative scroll-mt-24 overflow-hidden border-t border-border py-20 md:py-32"
       >
         <div className="pointer-events-none absolute bottom-0 left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 translate-y-1/3 rounded-full bg-crimson/20 blur-[160px] drift-slow" />
-        <div className="relative mx-auto max-w-6xl px-6">
+        <div className="relative mx-auto max-w-6xl px-5 md:px-6">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
               Get in touch
             </p>
-            <h2 className="mt-6 text-5xl font-800 leading-[0.95] md:text-8xl">
+            <h2 className="mt-6 text-4xl font-800 leading-[0.95] sm:text-5xl md:text-8xl">
               Let&apos;s build
               <br />
               something
@@ -236,15 +236,15 @@ function Index() {
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer"
-                  className="group flex items-center justify-between gap-4 py-6 transition-colors hover:bg-card/40"
+                  className="group flex flex-col gap-2 py-5 transition-colors hover:bg-card/40 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-6"
                 >
-                  <span className="flex items-center gap-4">
-                    <Icon className="h-4 w-4 text-crimson" />
-                    <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                  <span className="flex items-center gap-3 sm:gap-4">
+                    <Icon className="h-4 w-4 shrink-0 text-crimson" />
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground sm:text-xs">
                       {label}
                     </span>
                   </span>
-                  <span className="flex items-center gap-3 text-sm transition-transform duration-500 group-hover:-translate-x-1 md:text-lg">
+                  <span className="flex min-w-0 items-center gap-3 break-all text-xs transition-transform duration-500 group-hover:-translate-x-1 sm:text-sm md:text-lg">
                     {value}
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:text-crimson" />
                   </span>
