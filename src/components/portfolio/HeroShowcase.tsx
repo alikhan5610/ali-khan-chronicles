@@ -35,6 +35,13 @@ export function HeroShowcase() {
         </span>
       </div>
 
+      <div className="relative mx-auto w-full max-w-6xl px-6">
+        <p className="reveal font-display text-3xl font-800 leading-none md:text-5xl">Ali Khan</p>
+        <p className="reveal mt-3 max-w-md text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          Software Engineering · COMSATS University · Systems & AI
+        </p>
+      </div>
+
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 items-center px-6">
         <div className="relative w-full">
           <div className="relative mx-auto aspect-[16/9] w-full max-w-3xl overflow-hidden rounded-sm border border-border glow-crimson">
