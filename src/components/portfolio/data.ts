@@ -93,9 +93,10 @@ export const milestones = [
 ];
 
 export const sections = [
-  { id: "work", label: "Work" },
   { id: "about", label: "About" },
+  { id: "work", label: "Work" },
   { id: "craft", label: "Craft" },
   { id: "journey", label: "Journey" },
   { id: "contact", label: "Contact" },
 ];
+
